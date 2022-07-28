@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모르는 편지 회원가입</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./login.js"></script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <p>모르는 편지는 만 14세 이상 부터 가입이 가능합니다.</p>
+
+    <div class="login_order">
+        <label for="email">아이디(이메일) <span>*</span></label>
+        <div>
+            <input type="text" name="email" id="email">
+        </div>
+        <label for="pw">비밀번호 <span>*</span></label>
+        <div>
+            <input type="password" name="pw" id="pw">
+            <p>영문, 숫자, 특수문자 조합으로 이루어진 6자 ~ 12자를 입력하세요.<br>
+                [사용가능한 특수문자는 ! @ # $ % ^ * - + 입니다.]
+            </p>
+        </div>
+        <label for="rpw">비밀번호 확인 <span>*</span></label>
+        <div>
+            <input type="password" name="rpw" id="rpw">
+        </div>
+        <label for="nickname">필명(닉네임) <span>*</span></label>
+        <div>
+            <input type="text" name="nickname" id="nickname">
+            <p>2자 ~ 6자 사이 한글만 입력하세요.</p>
+            <button>중복 확인</button>
+        </div>
+        <label for="name">이름 <span>*</span></label>
+        <div>
+            <input type="text" name="name" id="name">
+            <p>한글로 이루어진 실명을 입력하세요.</p>
+        </div>
+        <label for="gender">성별 <span>*</span></label>
+        <div>
+            <input type="text" name="gender" id="gender">
+        </div>
+        <label for="birthday">생년월일 <span>*</span></label>
+        <div>
+            <input type="text" name="birthday" id="birthday">
+            <p>8자리로 된 숫자만 입력하시오 ex)20010420</p>
+        </div>
+        <label for="mobile">휴대폰번호 <span>*</ㄴ></label>
+        <div class="tel_con">
+            <input type="tel" name="mobile1" id="mobile1">-
+            <input type="tel" name="mobile2" id="mobile2">-
+            <input type="tel" name="mobile3" id="mobile3">
+            <button>본인 인증</button>
+        </div>
+        <label for="zip_code">우편번호 <span>*</span></label>
+        <div>
+            <input type="numder" name="zip_code" id="zip_code">
+        </div>
+        <label for="address">주소 <span>*</span></label>
+        <div>
+            <input type="text" name="address" id="address" value="우편번호 기입 시 자동 기입 됩니다." disabled>
+        </div>
+        <label for="detail_address">상세주소</label>
+        <div>
+            <input type="text" name="detail_address" id="detail_address">
+        </div>
+        
+        <label for="ch1"><span>*</span> 이용약관 동의합니다</label>
+        <input type="checkbox" name="ch1" id="ch1">
+        <label for="ch2"><span>*</span> 개인정보취급방침에 동의합니다</label>
+        <input type="checkbox" name="ch2" id="ch2">
+
+        <div class="ch1_pop pop">
+            이용약관 내용입니다.
+            <button>닫기</button>
+        </div>
+
+        <div class="ch2_pop pop">
+            개인정보취급방침 내용입니다.
+            <button>닫기</button>
+        </div>
+    </div>
+
+    <button onclick="joinform_check()">회원가입</button>
+</body>
+</html>
